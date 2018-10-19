@@ -5,10 +5,10 @@ services:
     image: mysql:5.7
     container_name: php_test_mysql
     environment:
-      MYSQL_ROOT_PASSWORD: simple_psw
+      MYSQL_ROOT_PASSWORD: simple_password
       MYSQL_DATABASE: test_db
       MYSQL_USER: devuser
-      MYSQL_PASSWORD: simple_psw
+      MYSQL_PASSWORD: simple_password
     ports:
       - 9906:3306
     volumes:
