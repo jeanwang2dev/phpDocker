@@ -7,7 +7,7 @@
         <?php
             $db = 'test_db';
 	    $user = 'devuser';
-	    $pass = 'simple_password';
+	    $pass = 'simple_psw';
 	    $host = 'php_test_mysql';
 
 	try {		
