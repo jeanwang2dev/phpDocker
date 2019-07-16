@@ -18,6 +18,12 @@
   	  echo "Connection failed: " . $e->getMessage();
 	}	
 
+	$req = $db->query("SELECT author FROM classics");
+	foreach ($req->fetchAll(PDO::FETCH_ASSOC) as $record) {
+		$results[] = $record;
+	}	
+	echo '<pre>'; var_dump($results); echo '</pre>';
+
         ?>
     </body>
 </html>
