@@ -23,7 +23,18 @@ Connected successfully
 Fatal error: Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test_db.classics' doesn't exist in /var/www/html/index.php:21 Stack trace: #0 /var/www/html/index.php(21): PDO->query('SELECT author F...') #1 {main} thrown in /var/www/html/index.php on line 21
 ```
 
-To import the initial table into database, go to port 8081, use the credential to login, then use the 'import' tab to import classics.sql file.
+To import the initial table into database, go to port 8081, use the credential to login, then use the 'import' tab to import classics.sql file. Then refresh your index.php on port 8080, you should see
+```
+Connected successfully
+array(5) {
+  [0]=>
+  array(1) {
+    ["author"]=>
+    string(15) "Charles Dickens"
+...
+}
+```
+
 
 The script will create a 'data' folder inside your folder, mounted from /var/lib/mysql from container php_test_mysql, with a default database test_db
 
