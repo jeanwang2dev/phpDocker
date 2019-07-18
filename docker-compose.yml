@@ -2,7 +2,9 @@ version: '2.0'
 
 services:
   db:
-    image: mysql:5.7
+    build: 
+      context: ./bin/db
+    image: populated_mysql
     container_name: php_test_mysql
     restart: 'always'
     environment:
@@ -14,7 +16,7 @@ services:
       - 9906:3306
     volumes:
       - ./data:/var/lib/mysql
- 
+      
   php-myadmin:
     image: phpmyadmin/phpmyadmin
     container_name: php_test_myadmin
@@ -27,7 +29,8 @@ services:
       - db:mysql
 
   app:
-    build: . 
+    build: 
+      context: ./bin/app
     image: php_apache_pdo
     container_name: php_test_app
     depends_on:
