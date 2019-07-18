@@ -45,8 +45,7 @@ array(3) {
   }
 }
 ```
-
-The script will create a 'data' folder inside your folder, mounted from /var/lib/mysql from container php_test_mysql, with a default database test_db
+You can go to 8081 login to phpMyAdmin to add or delete records in the table classics, and refresh the index.php page on port 8080 to view to change.
 
 Stop and remove containers by 
 ```
