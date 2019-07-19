@@ -30,6 +30,7 @@ services:
     ports:
       - 9906:3306
     volumes:
+      - ./bin/db/sql-scripts:/docker-entrypoint-initdb.d/
       - mysql:/var/lib/mysql
       
   php-myadmin:

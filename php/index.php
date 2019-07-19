@@ -18,7 +18,7 @@
 			echo "Connection failed: " . $e->getMessage();
 			}	
 
-			$req = $db->query("SELECT author FROM classics");
+			$req = $db->query("SELECT * FROM short_names");
 			foreach ($req->fetchAll(PDO::FETCH_ASSOC) as $record) {
 				$results[] = $record;
 			}	
