@@ -1,4 +1,4 @@
-# Building a simple php apache and mysql environment in Docker -- Copy script folder to the script startup folder in container
+# Building a simple php apache and mysql environment in Docker -- Import sql file with phpMyAdmin
 
  * I want to quickly spin up a php apache and mysql environment with Docker on a Remote Sever
  * I want to be able to mount my project code and run on the environment on Docker
