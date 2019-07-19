@@ -44,10 +44,10 @@ function createInput($records){
 		$output .= "<div class='row'>";
 		$output .= "<div class='col-md-2'><input type='text' class='form-control' name='fname' value='".$row['first_name']."'></div>";
 		$output .= "<div class='col-md-2'><input type='text' class='form-control' name='lname' value='".$row['last_name']."'></div>";
-		$output .= "<div class='col-md-1'><input type='text' class='form-control' name='color' value='".$row['eye_color']."'></div>";
+		$output .= "<div class='col-md-2'><input type='text' class='form-control' name='color' value='".$row['eye_color']."'></div>";
 		$output .= "<div class='col-md-2'><input type='text' class='form-control' name='gender' value='".$row['gender']."'></div>";
-		$output .= "<div class='col-md-1'><input type='text' class='form-control' name='state' value='".$row['state']."'></div>";
-		$output .= "<div class='col-md-4'><input type='button' class='btn btn-success' id='u".$row['id']."' value='Update' >&nbsp;<input type='button' class='btn btn-danger' id='d".$row['id']."' value='Delete' ></div>";
+		$output .= "<div class='col-md-2'><input type='text' class='form-control' name='state' value='".$row['state']."'></div>";
+		$output .= "<div class='col-md-2'><input type='button' class='btn btn-success' id='u".$row['id']."' value='Update' >&nbsp;<input type='button' class='btn btn-danger' id='d".$row['id']."' value='Delete' ></div>";
 		$output .= "</div>";
 
 	}
