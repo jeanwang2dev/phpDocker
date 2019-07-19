@@ -34,7 +34,7 @@ services:
       - mysql:/var/lib/mysql
       
   php-myadmin:
-    image: phpmyadmin/phpmyadmin
+    image: phpmyadmin/phpmyadmin:4.8
     container_name: php_test_myadmin
     ports:
       - 8081:80
