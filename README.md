@@ -1,4 +1,4 @@
-# Building a simple php apache and mysql environment in Docker
+# Building a simple php apache and mysql environment in Docker -- Copy the scripts folder into container with Dockerfile
 
  * I want to quickly spin up a php apache and mysql environment with Docker on a Remote Sever
  * I want to be able to mount my project code and run on the environment on Docker
@@ -10,6 +10,10 @@
 
  * There are two sub-folders in the bin folder: one for building db image; one for building app image
  * The db sub-folder includes the sql scripts folder to copy to /docker-entrypoint-initdb.d/ when building the image in Dockerfile
+ * In the Dockerfile of building the mysql image
+```
+COPY ./sql-scripts/*.sql /docker-entrypoint-initdb.d/
+```
  * All scripts in docker-entrypoint-initdb.d/ are automatically executed during container startup
  * I learn from [this article](https://medium.com/better-programming/customize-your-mysql-database-in-docker-723ffd59d8fb)
 
