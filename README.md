@@ -16,8 +16,9 @@
  * The db sub-folder includes the sql scripts folder to copy to /docker-entrypoint-initdb.d/ when building the image in Dockerfile
  * All scripts in docker-entrypoint-initdb.d/ are automatically executed during container startup
  * I learn from [this article](https://medium.com/better-programming/customize-your-mysql-database-in-docker-723ffd59d8fb)
+
  
-## I copy the Db_conn.php file to /home/ directory in the app container so the PDO utility class can find it. And protect it from being in the public folder.
+### I copy the Db_conn.php file to /home/ directory in the app container so the PDO utility class can find it. And protect it from being in the public folder.
 
 ## Getting Started
 After git clone the folder to your machine that has docker installed, inside the folder Run 	
