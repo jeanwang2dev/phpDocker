@@ -16,6 +16,12 @@
  * The db sub-folder includes the sql scripts folder to copy to /docker-entrypoint-initdb.d/ when building the image in Dockerfile
  * All scripts in docker-entrypoint-initdb.d/ are automatically executed during container startup
  * I learn from [this article](https://medium.com/better-programming/customize-your-mysql-database-in-docker-723ffd59d8fb)
+ 
+## I created a config foldler with my.cnf file in it, mount it to the /etc/mysql/conf.d in the mysql container 
+
+ * Because in MySQL 8.0 caching_sha2_password is the default authentication plugin rather than mysql_native_password, which is the default method in MySQL 5.7 and prior. 
+ * I want use the MySQL 8.0 with mysql_native_password so phpMyAdmin can recognize it and connnect to it.
+ * See reference links from [here](https://stackoverflow.com/questions/49948350/phpmyadmin-on-mysql-8-0) and [here](https://medium.com/@crmcmullen/how-to-run-mysql-8-0-with-native-password-authentication-502de5bac661)
 
  
 ### I copy the Db_conn.php file to /home/ directory in the app container so the PDO utility class can find it. And protect it from being in the public folder.
